@@ -22,9 +22,9 @@
 import platform
 
 from core.utils import current_desktop, eval_in_emacs, focus_emacs_buffer, get_emacs_func_cache_result, get_emacs_var
-from PyQt6.QtCore import QEvent, QPoint, Qt
-from PyQt6.QtGui import QBrush, QPainter, QWindow
-from PyQt6.QtWidgets import QFrame, QGraphicsView, QVBoxLayout, QWidget
+from PyQt5.QtCore import QEvent, QPoint, Qt
+from PyQt5.QtGui import QBrush, QPainter, QWindow
+from PyQt5.QtWidgets import QFrame, QGraphicsView, QVBoxLayout, QWidget
 
 if current_desktop in ["sway", "Hyprland"] and get_emacs_func_cache_result("eaf-emacs-running-in-wayland-native", []):
     global reinput

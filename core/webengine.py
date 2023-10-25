@@ -31,12 +31,12 @@ from urllib.parse import parse_qs, urlparse
 
 from core.buffer import Buffer
 from core.utils import *
-from PyQt6 import QtCore
-from PyQt6.QtCore import QEvent, QEventLoop, QPoint, QPointF, Qt, QThread, QTimer, QUrl, pyqtSlot
-from PyQt6.QtWebChannel import QWebChannel
-from PyQt6.QtWebEngineCore import QWebEnginePage, QWebEngineProfile, QWebEngineScript, QWebEngineSettings
-from PyQt6.QtWebEngineWidgets import QWebEngineView
-from PyQt6.QtWidgets import QApplication, QWidget
+from PyQt5 import QtCore
+from PyQt5.QtCore import QEvent, QEventLoop, QPoint, QPointF, Qt, QThread, QTimer, QUrl, pyqtSlot
+from PyQt5.QtWebChannel import QWebChannel
+from PyQt5.QtWebEngineWidgets import QWebEnginePage, QWebEngineProfile, QWebEngineScript, QWebEngineSettings
+from PyQt5.QtWebEngineWidgets import QWebEngineView
+from PyQt5.QtWidgets import QApplication, QWidget
 
 MOUSE_LEFT_BUTTON = 1
 MOUSE_WHEEL_BUTTON = 4
@@ -434,7 +434,7 @@ Note, we need hook this function to signal 'loadProgress', signal 'loadStarted' 
             traceback.print_exc()
 
     def scroll_wheel(self, x_offset, y_offset):
-        from PyQt6.QtGui import QWheelEvent
+        from PyQt5.QtGui import QWheelEvent
 
         self.simulated_wheel_event = True
 
@@ -1750,7 +1750,7 @@ class CookiesManager(object):
         all_cookies_domain = os.listdir(self.cookies_dir)
 
         for domain in filter(self.domain_matching, all_cookies_domain):
-            from PyQt6.QtNetwork import QNetworkCookie
+            from PyQt5.QtNetwork import QNetworkCookie
 
             domain_dir = os.path.join(self.cookies_dir, domain)
 
@@ -1784,7 +1784,7 @@ class CookiesManager(object):
         ''' Delete all cookie used by current site except session cookies.'''
         import shutil
 
-        from PyQt6.QtNetwork import QNetworkCookie
+        from PyQt5.QtNetwork import QNetworkCookie
 
         cookies_domain = os.listdir(self.cookies_dir)
 

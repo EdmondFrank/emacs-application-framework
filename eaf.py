@@ -22,11 +22,11 @@
 # NOTE
 # QtWebEngine will throw error "ImportError: QtWebEngineWidgets must be imported before a QCoreApplication instance is created"
 # So we import browser module before start Qt application instance to avoid this error, but we never use this module.
-from PyQt6 import QtWebEngineWidgets as NeverUsed # noqa
+from PyQt5 import QtWebEngineWidgets as NeverUsed # noqa
 
-from PyQt6.QtNetwork import QNetworkProxy, QNetworkProxyFactory
-from PyQt6.QtWidgets import QApplication
-from PyQt6.QtCore import QTimer, QThread
+from PyQt5.QtNetwork import QNetworkProxy, QNetworkProxyFactory
+from PyQt5.QtWidgets import QApplication
+from PyQt5.QtCore import QTimer, QThread
 from core.utils import PostGui, eval_in_emacs, get_emacs_var, init_epc_client, close_epc_client, message_to_emacs, get_emacs_vars, get_emacs_config_dir
 from epc.server import ThreadingEPCServer
 import json

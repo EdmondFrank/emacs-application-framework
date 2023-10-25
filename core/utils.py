@@ -22,9 +22,9 @@
 import os
 
 import sexpdata
-from PyQt6 import QtGui
-from PyQt6.QtCore import QObject, pyqtSignal
-from PyQt6.QtWidgets import QApplication
+from PyQt5 import QtGui
+from PyQt5.QtCore import QObject, pyqtSignal
+from PyQt5.QtWidgets import QApplication
 
 
 class PostGui(QObject):
@@ -163,8 +163,8 @@ def call_and_check_code(popen_args, on_exit):
 
 def get_clipboard_text():
     ''' Get text from system clipboard.'''
-    from PyQt6.QtGui import QClipboard
-    from PyQt6.QtWidgets import QApplication
+    from PyQt5.QtGui import QClipboard
+    from PyQt5.QtWidgets import QApplication
 
     clipboard = QApplication.clipboard()
     text = clipboard.text()
@@ -178,8 +178,8 @@ def get_clipboard_text():
 
 def set_clipboard_text(text):
     ''' Set text to system clipboard.'''
-    from PyQt6.QtGui import QClipboard
-    from PyQt6.QtWidgets import QApplication
+    from PyQt5.QtGui import QClipboard
+    from PyQt5.QtWidgets import QApplication
 
     clipboard = QApplication.clipboard()
     clipboard.setText(text)

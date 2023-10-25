@@ -24,9 +24,9 @@ import string
 import time
 
 from core.utils import *
-from PyQt6.QtCore import QEvent, Qt, QThread, pyqtSignal
-from PyQt6.QtGui import QColor, QCursor, QFocusEvent, QKeyEvent
-from PyQt6.QtWidgets import QApplication, QGraphicsScene
+from PyQt5.QtCore import QEvent, Qt, QThread, pyqtSignal
+from PyQt5.QtGui import QColor, QCursor, QFocusEvent, QKeyEvent
+from PyQt5.QtWidgets import QApplication, QGraphicsScene
 
 QT_KEY_DICT = {}
 
